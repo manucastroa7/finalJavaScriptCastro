@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+
+}
+
+.container-fluid {
+    background-color: white;
+    height: 100px;
+
+}
+
+header {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+
+}
+
+section {
+    padding: 1rem;
+    height: auto;
+
+}
+section h2 {
+    animation: fadeInLeft;
+    animation-duration: 2s;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+main .imagenHabitacion img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0px;
+
+}
+
+.logo {
+    width: 30%;
+    height: 20%;
+    animation: fadeInLeft;
+    animation-duration: 2s;
+    margin-bottom: 0px;
+
+}
+
+.navbar-brand {
+    width: 100%;
+}
+
+
+.navbar-nav .nav-link {
+    margin: 1.5rem;
+    animation: fadeInRight;
+    animation-duration: 2s;
+
+}
+
+.navbar-nav a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-nav a:before,
+.navbar-nav a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transition: left .8s;
+}
+
+.navbar-nav a:hover:before {
+    left: 0;
+}
+
+.navbar-nav a:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: -100%;
+    background: #333;
+    transition: right .8s;
+}
+
+.navbar-nav a:hover:after {
+    right: 0;
+}
+
+footer {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.datosFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+
+}
+
+.headingFooter {
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.textoFooter {
+    color: whitesmoke;
+}
+
+/* GRID */
+
+.contenedorGral {
+    display: grid;
+    grid-template-areas: "header"
+        "main"
+        "section"
+        "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* CAJA */
+
+.caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid  rgb(136, 136, 136, 0.4);
+    box-shadow: 3px 5px rgb(136, 136, 136, 0.3);
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    margin: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.caja img {
+    
+    width: 50%;
+}
+
+.description {
+    width: 40%;
+}
+
+.description p {
+    font-family: 'Montserrat', sans-serif;
+    text-align:left;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+img {
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.boton{
+    display: inline;
+    text-align: center;
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: .8rem;
+}
+.boton:hover{
+    background-color: black;
+    color: white;
+}
+
+.d-none{
+    display: none;
+}
+
+/* POP UP */
+
+.popupDetalle{
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(128, 128, 128, 0.4);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupDetalle>div{
+    background: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align:left;
+}
+
+.popupDetalle h2 {
+    text-align: center;
+    margin-top: 1rem;
+    
+    }
+
+.popupDetalle h3 {
+font-size: 1rem;
+
+}
+
+.popupDetalle h4 {
+    font-size: 1rem;
+    
+    }
+
+.popupDetalle .cantidadPasajeros {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.popupDetalle .cantidadPasajeros h3{
+    margin-top: 0.5rem;
+}
+.popupDetalle .cantidadNoches {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.popupDetalle .cantidadNoches h3{
+
+    margin-top: 0.5rem;
+}
+
+.popupDetalle .click {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0.3rem 0 0.3rem 0.3rem ;
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+} 
+
+.popupDetalle .click span{
+    
+    padding: 1rem;
+}
+
+.popupDetalle .botones{
+    
+    display: flex;
+    justify-content: flex-end;
+    
+   
+}
+
+.popupDetalle .botonCarrito{
+    
+ 
+    align-content: left;
+    text-align: center;
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: .8rem;
+    margin-right: 0.5rem ;
+
+    
+}
+
+.botonCarrito:hover{
+    background-color: rgb(3, 70, 3);
+    color: white;
+}
+
+.popupDetalle p{
+    
+    
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.popupDetalle .closePopup{
+    
+    
+    text-align: center;
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: .8rem;
+}
+
+.closePopup:hover{
+    background-color: rgb(124, 7, 7);
+    color: white;
+}
+
+.popupDetalle .valorHab {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.popupDetalle .valorFinal {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.popupDetalle .valorFinal h4 {
+    margin-top: 0.5rem;
+}
+
+.popupDetalle .botonCalcular{
+    
+    text-align: center;
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 0.5rem ;
+    font-size: .8rem;
+}
+
+.botonCalcular:hover{
+    background-color: black;
+    color: white;
+}
+
+.popupDetalle .resultadoTotal {
+   margin: 1rem;
+   font-size: 1.4rem;
+
+}
+
+.popupDetalle .irCarrito{
+    
+ 
+    align-content: left;
+    text-align: center;
+    border: 1px solid rgb(57, 57, 57, 0.5);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    font-size: .8rem;
+    margin-left: 0.5rem ;
+
+    
+}
+
+.irCarrito:hover{
+    background-color: rgb(3, 70, 3);
+    color: white;
+}
